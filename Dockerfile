@@ -1,9 +1,9 @@
 FROM node as buildStage
 WORKDIR /catch-me
 COPY ./package*.json /catch-me/
-RUN "npm install"
+RUN npm install
 COPY * /catch-me/
-RUN "npm run build"
+RUN npm run build
 
 FROM nginx
 COPY --from=buildStage /catch-me/dist/ /usr/share/nginx/html
