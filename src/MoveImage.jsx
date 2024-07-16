@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './MoveImage.css'
+import jerry from './assets/jerry.png';
 
 function MoveImage() {
     const [position, setPosition] = useState({top: 0, left: 0});
@@ -13,7 +14,7 @@ function MoveImage() {
 
     return (
         <img 
-        src='https://i.ytimg.com/vi/UjqShe7ZfQg/maxresdefault.jpghttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp2Tdxd9ILCDVmfg-ANTp0rvtZ-Y0yicKqBA&shttps://m.media-amazon.com/images/I/41UECsJdp9L._SR600%2C315_PIWhiteStrip%2CBottomLeft%2C0%2C35_SCLZZZZZZZ_FMpng_BG255%2C255%2C255.jpg'
+        src={jerry}
         alt="moving image"
         onMouseOver={handleMouseMove}
         style={{
