@@ -7,4 +7,3 @@ RUN npm run build
 
 FROM nginx
 COPY --from=buildStage /catch-me/dist/ /usr/share/nginx/html
-EXPOSE 3000
