@@ -5,5 +5,5 @@ RUN npm install
 COPY . /catch-me/
 RUN npm run build
 
-FROM nginx
+FROM nginx:stable-perl
 COPY --from=buildStage /catch-me/dist/ /usr/share/nginx/html
