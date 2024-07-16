@@ -1,4 +1,4 @@
-FROM node:lts-alpine3.20 as buildStage
+FROM node as buildStage
 WORKDIR /catch-me
 COPY ./package*.json /catch-me/
 RUN "npm install"
