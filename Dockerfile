@@ -5,5 +5,5 @@ RUN npm install
 COPY . /catch-me/
 RUN npm run build
 
-FROM nginx:stable-perl
+FROM nginx:stable-alpine3.19-slim
 COPY --from=buildStage /catch-me/dist/ /usr/share/nginx/html
