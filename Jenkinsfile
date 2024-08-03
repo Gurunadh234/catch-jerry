@@ -10,7 +10,7 @@ pipeline {
     stage("Test"){
         steps {
             sleep 2
-            sh "echo Test stage"
+            sh "eco Test stage"
         }
     }
     stage("Deploy"){
