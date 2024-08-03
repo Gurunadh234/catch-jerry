@@ -3,16 +3,19 @@ pipeline {
   stages {
     stage("Build"){
         steps {
+            sleep 2
             sh "echo Build stage"
         }
     }
     stage("Test"){
         steps {
+            sleep 2
             sh "echo Test stage"
         }
     }
     stage("Deploy"){
         steps {
+            sleep 2
             sh "echo Deploy stage"
         }
     }
