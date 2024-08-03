@@ -39,7 +39,7 @@ pipeline {
     aborted {
         sh "echo Aborted"
     }
-    fixed {o
+    fixed {
         sh "echo Fixed"
     }
     unsuccessful {
