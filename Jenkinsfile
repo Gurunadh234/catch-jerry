@@ -10,7 +10,7 @@ pipeline {
     stage("Test"){
         steps {
             sleep 2
-            sh "ech Test stage"
+            sh "echo Test stage"
         }
     }
     stage("Deploy"){
