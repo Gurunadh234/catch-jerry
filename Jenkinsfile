@@ -1,16 +1,52 @@
 pipeline {
   agent any
   stages {
-    stage("Build") {
-      steps {
-	echo "application build stage"
-      }
+    stage("Build"){
+        steps {
+            sh "echo Build stage"
+        }
     }
-    stage("Build Image") {
-      steps {
-	echo "docker image build stage"
-      }
+    stage("Test"){
+        steps {
+            sh "echo Test stage"
+        }
     }
-    
+    stage("Deploy"){
+        steps {
+            sh "echo Deploy stage"
+        }
+    }
+  }
+  post{
+    always {
+        sh "echo Always block"
+    }
+    success {
+        sh "echo Success block"
+    }
+    failure {
+        sh "echo Failure block"
+    }
+    changed {
+        sh "echo onChange block"
+    }
+    unstable {
+        sh "echo unstable block"
+    }
+    aborted {
+        sh "echo Aborted"
+    }
+    fixed {
+        sh "echo Fixed"
+    }
+    unsuccessful {
+        sh "echo unsuccessful"
+    }
+    regression {
+        sh "echo regression"
+    }
+    cleanup {
+        sh "echo Cleanup"
+    }
   }
 }
