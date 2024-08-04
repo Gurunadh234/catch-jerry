@@ -47,7 +47,8 @@ pipeline {
         sh "echo unsuccessful"
     }
     regression {
-        sh "echo regression"
+        sh "echo Regression block"
+        sh "echo Build deteriorated to ${currentBuild.currentResult}"
     }
     cleanup {
         sh "echo Cleanup"
