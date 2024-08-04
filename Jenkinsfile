@@ -1,26 +1,5 @@
 pipeline {
   agent any
-  stages {
-    stage("Build"){
-        steps {
-            sleep 2
-            sh "echo Build stage"
-            unstable("unstable")
-        }
-    }
-    stage("Test"){
-        steps {
-            sleep 2
-            sh "echo Test stage"
-        }
-    }
-    stage("Deploy"){
-        steps {
-            sleep 2
-            sh "echo Deploy stage"
-        }
-    }
-  }
   post{
     always {
         sh "echo Always block"
@@ -51,6 +30,27 @@ pipeline {
     }
     cleanup {
         sh "echo Cleanup"
+    }
+  }
+  stages {
+    stage("Build"){
+        steps {
+            sleep 2
+            sh "echo Build stage"
+            unstable("unstable")
+        }
+    }
+    stage("Test"){
+        steps {
+            sleep 2
+            sh "echo Test stage"
+        }
+    }
+    stage("Deploy"){
+        steps {
+            sleep 2
+            sh "echo Deploy stage"
+        }
     }
   }
 }
