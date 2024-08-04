@@ -11,7 +11,7 @@ pipeline {
     stage("Test"){
         steps {
             sleep 2
-            sh "ech Test stage"
+            sh "echo Test stage"
         }
     }
     stage("Deploy"){
@@ -51,7 +51,7 @@ pipeline {
         sh "echo Build deteriorated to ${currentBuild.currentResult}"
     }
     cleanup {
-        sh "echo Cleanup"
+        sh "echo Cleanup block"
     }
   }
 }
