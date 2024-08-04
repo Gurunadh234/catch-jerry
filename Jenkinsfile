@@ -5,7 +5,7 @@ pipeline {
         steps {
             sleep 2
             sh "echo Build stage"
-            unstable("unstable")
+            //unstable("unstable")
         }
     }
     stage("Test"){
