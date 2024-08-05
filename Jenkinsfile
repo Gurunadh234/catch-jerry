@@ -13,6 +13,9 @@ pipeline {
             sleep 2
             sh "echo Test stage"
         }
+        steps {
+            sh "echo secondary step in test"
+        }
     }
     stage("Deploy"){
         steps {
