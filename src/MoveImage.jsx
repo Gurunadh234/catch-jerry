@@ -25,7 +25,7 @@ function MoveImage() {
         src={jerry}
         alt="moving image"
         onMouseOver={handleMouseMove}
-        onTouchMove={}
+        onTouchMove={handleTouchMove}
         style={{
             position: 'absolute',
             top: position.top,
