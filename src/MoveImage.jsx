@@ -17,6 +17,7 @@ function MoveImage() {
         src={jerry}
         alt="moving image"
         onMouseOver={handleMouseMove}
+        draggable="false"
         style={{
             position: 'absolute',
             top: position.top,
