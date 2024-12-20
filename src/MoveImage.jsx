@@ -22,6 +22,7 @@ function MoveImage() {
 
     return (
         <img 
+        tabIndex={-1}
         src={jerry}
         alt="moving image"
         onMouseOver={handleMouseMove}
