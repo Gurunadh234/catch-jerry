@@ -12,11 +12,20 @@ function MoveImage() {
         });
     }
 
+    function handleTouchMove(event){
+        const touch = event.touches[0];
+        setPosition({
+            top: touch.clientY - event.target.offsetHeight / 2,
+            left: touch.clientX - event.target.offsetWidth / 2
+        })
+    }
+
     return (
         <img 
         src={jerry}
         alt="moving image"
         onMouseOver={handleMouseMove}
+        onTouchMove={}
         style={{
             position: 'absolute',
             top: position.top,
